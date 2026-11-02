@@ -56,4 +56,20 @@ Each investigation can contain `id`, `title`, `status`, `question`, `background`
 3. Check image credits, citations, dates, and evidence labels.
 4. Commit and push your edits. GitHub Pages will update if enabled for that branch.
 
-Editing JSON is the current content-entry workflow. There is no browser-based editor, account system, or automatic upload service.
+You can edit JSON directly or use the visual animal editor described below. There is no account system or automatic publishing service.
+
+## Visual editing
+
+Choose **Edit animals** in the navigation. Select an animal or **Add a new animal**, then edit its name, notes, research sources, classification, and photo. Unknown ranks should remain blank. Put one trait, behavior, habitat, or question on each line. Sources use `Title | https://source-url` on each line.
+
+Choose a JPEG, PNG, or WebP photo and provide an accurate description and credit. The editor resizes it to a maximum of 1200 pixels, re-encodes it to WebP, and embeds the image in the downloaded JSON. This produces a self-contained file without a separate photo upload and strips original metadata. Use repository image paths for larger collections to keep JSON sizes manageable.
+
+1. Click **Save animal to browser draft**. This updates your private preview and saves it in this browser’s local storage.
+2. Click **Download saved animals.json**. Unsaved form edits are not included.
+3. In GitHub, replace `data/animals.json` with that downloaded file, then commit to your publishing branch. GitHub Pages updates after deployment.
+
+Browser storage is limited and can be erased; download backups regularly. The editor reports storage failures without applying those changes. Anyone can edit their own private browser preview, but this grants no permission to publish to your repository. There is no authentication, direct GitHub write, or shared draft service. Journal and investigation editing still uses JSON files.
+
+**Return to published collection** discards this browser’s private draft after confirmation. Re-download or discard stale browser drafts before working from a newer published dataset; drafts are not automatically merged across browsers or upstream changes.
+
+Animal records now support a `taxonomy` object with keys `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, and `species`. Values are names or `null`. See [classification notes](taxonomy.md).

@@ -12,7 +12,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 Open the site through your local development setup. Serve over HTTP; opening `index.html` directly will block JSON loading in many browsers.
 
 ### Add content
-See [the data entry guide](docs/data-entry-guide.md), [research methods](docs/research-methods.md), and [sources](docs/sources.md). Edit the JSON files under `data/`, add photos under `assets/images/wildlife/`, preview, then commit and push. The page is a public viewer; it does not save changes from the browser.
+See [the data entry guide](docs/data-entry-guide.md), [research methods](docs/research-methods.md), and [sources](docs/sources.md). Edit the JSON files under `data/`, add photos under `assets/images/wildlife/`, preview, then commit and push. Use **Edit animals** for a visual editor with browser drafts and downloadable JSON. Publishing still requires committing the downloaded file to GitHub. The expandable **Taxonomy tree** groups records from Kingdom to Species, leaving uncertain ranks unclassified.
 
 ### Publish with GitHub Pages
 In this repository’s **Settings → Pages**, select **Deploy from a branch**, choose the branch containing this site (normally `main`), and choose **/ (root)**. Save. GitHub will provide the deployed URL after publishing. No custom domain or build workflow is required. Publishing is separate from committing and pushing the files.
